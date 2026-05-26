@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiración Audiovisual — Nicoleta Scalia</title>
+
+    <!-- Misma hoja de estilo externa que index.html -->
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+
+    <!-- Estilos adicionales específicos de esta página -->
+    <style>
+        /* Grilla de videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 24px;
+        }
+
+        /* Contenedor de video responsivo (mantiene proporción 16:9) */
+        .video-wrap {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 4px;
+            border: 1px solid var(--borde);
+            background: #111;
+        }
+
+        .video-wrap iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info { margin-top: 12px; }
+
+        .video-info h2 {
+            font-size: 1.05rem;
+            border-bottom: none;
+            margin: 0 0 6px;
+            padding: 0;
+            color: var(--carbon);
+        }
+
+        .video-info p { font-size: 0.88rem; margin-bottom: 6px; }
+    </style>
+</head>
+<body>
+
+<!-- ===================== NAVEGACIÓN ===================== -->
+<!-- Navegación de ida y vuelta entre páginas (punto 10) -->
+<nav>
+    <a class="logo" href="index.html">NS</a>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="media.html">Inspiración</a></li>
+        <li><a href="https://labscaliayanzi.wordpress.com/" target="_blank" rel="noopener">Blog</a></li>
+    </ul>
+</nav>
+
+<!-- ===================== HERO SECUNDARIO ===================== -->
+<div class="hero" style="padding: 40px 10%;">
+    <div class="hero-texto">
+        <h1>Inspiración<br><em>Audiovisual</em></h1>
+        <p>Música y video que moldean mi mirada creativa</p>
+    </div>
+</div>
+
+<!-- ===================== SECCIÓN VIDEOS ===================== -->
+<section id="videos">
+    <span class="label">Audiovisual</span>
+    <h2>Lo que escucho y miro mientras diseño</h2>
+    <p>
+        La música y el cine son parte de mi proceso creativo. Estos videos representan
+        estéticas, atmósferas y sensaciones que influyen en cómo pienso los espacios.
+    </p>
+
+    <div class="video-grid">
+
+        <!-- VIDEO 1: Tour de diseño de interiores (YouTube) -->
+        <!-- Atribución de autoría (punto 9) -->
+        <div>
+            <div class="video-wrap">
+                <!--
+                    Video embebido de YouTube (punto 9).
+                    "Japandi Interior Design" — canal interior design ideas.
+                    URL original: https://www.youtube.com/watch?v=O8nHYtZvPkc
+                    Se usa el embed de YouTube (youtube-nocookie para privacidad).
+                -->
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/P25GF4F0Ocs"
+                    title="Preferencia audiovisual — YouTube"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h2>Diseño Japandi</h2>
+                <p>
+                    Un recorrido por un interior que fusiona la austeridad japonesa con
+                    la calidez escandinava. Materialidad, luz y silencio visual.
+                </p>
+                <!-- Atribución (punto 7 y 9) -->
+                <p class="atribucion">
+                    Video: <em>Japandi Interior Design Tour</em> —
+                    <a href="https://www.youtube.com/watch?v=P25GF4F0Ocs" target="_blank" rel="noopener">YouTube</a>.
+                    Autoría del canal correspondiente. Uso con fines educativos.
+                </p>
+            </div>
+        </div>
+
+        <!-- VIDEO 2: Música ambient/lo-fi para diseñar -->
+        <div>
+            <div class="video-wrap">
+                <!--
+                    Video: "lofi hip hop radio" — beats to relax/study to
+                    Canal: Lofi Girl — https://www.youtube.com/watch?v=jfKfPfyJRdk
+                -->
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/wyJd8xYuyyQ"
+                    title="Preferencia musical — YouTube"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h2>Música de Jorge Drexler</h2>
+                <p>
+                    Lo-fi hip hop es la banda sonora de mis sesiones de trabajo. Ritmos
+                    tranquilos que favorecen la concentración y el flujo creativo.
+                </p>
+                <!-- Atribución (punto 7 y 9) -->
+                <p class="atribucion">
+                    Video: <em>Jorge Drexler</em> —
+                    <a href="https://www.youtube.com/watch?v=wyJd8xYuyyQ" target="_blank" rel="noopener">YouTube</a>.
+                    Autoría del canal correspondiente. Uso con fines educativos.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===================== SECCIÓN: Por qué esto me inspira ===================== -->
+<section>
+    <span class="label">Reflexión</span>
+    <h2>La conexión entre sonido y espacio</h2>
+    <p>
+        Creo que el diseño de interiores y la música comparten algo fundamental:
+        ambos crean atmósferas. Un espacio bien diseñado, como una buena canción,
+        hace que las personas se sientan de una determinada manera sin saber
+        exactamente por qué.
+    </p>
+    <p>
+        Cuando diseño, escucho música que evoca las emociones que quiero transmitir
+        con el espacio. Es una forma de sintonizar con el ambiente antes de comenzar.
+    </p>
+
+    <!-- Enlace de vuelta a la página principal (punto 10) -->
+    <p>
+        ← <a href="index.html">Volver a mi presentación</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="https://labscaliayanzi.wordpress.com/" target="_blank" rel="noopener">Blog de la materia →</a>
+    </p>
+</section>
+
+<!-- ===================== LICENCIA ===================== -->
+<section>
+    <div class="licencia">
+        <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener license">
+            <img
+                src="https://licensebuttons.net/l/by-nc/4.0/88x31.png"
+                alt="Licencia Creative Commons Atribución-NoComercial 4.0"
+            >
+        </a>
+        <p>
+            Contenidos de autoría propia bajo licencia
+            <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">
+                CC BY-NC 4.0
+            </a>.
+            Los videos embebidos pertenecen a sus respectivos autores en YouTube.
+        </p>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+    <p>
+        © 2025 Nicoleta Scalia — Diseñadora de Interiores ·
+        <a href="https://labscaliayanzi.wordpress.com/" target="_blank" rel="noopener">Blog de la materia</a>
+        · <a href="index.html">← Volver al inicio</a>
+    </p>
+</footer>
+
+</body>
+</html>

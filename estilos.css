@@ -1,0 +1,242 @@
+/* ================================================
+   estilos.css — Portfolio de Nicoleta Scalia
+   Diseñadora de Interiores
+   Paleta: marfil, terracota, verde salvia, carbón
+   ================================================ */
+
+/* Fuentes Google Fonts:
+   - Cormorant Garamond: titular elegante, editorial
+   - DM Sans: cuerpo legible, moderna sin serif */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* Variables de color — paleta diseño de interiores */
+:root {
+    --marfil:      #faf7f2;
+    --crema:       #f2ece0;
+    --terracota:   #b5614a;
+    --terracota-suave: #e8c4b8;
+    --salvia:      #7a8c6e;
+    --carbon:      #2c2825;
+    --gris-texto:  #5a5450;
+    --borde:       #e0d8cc;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--marfil);
+    color: var(--carbon);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.75;
+    min-height: 100vh;
+}
+
+/* ---- NAVEGACIÓN ---- */
+nav {
+    background-color: var(--carbon);
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--marfil);
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+nav ul { list-style: none; display: flex; gap: 28px; }
+
+nav ul li a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #c8bfb5;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover { color: var(--terracota-suave); }
+
+/* ---- HERO ---- */
+.hero {
+    background-color: var(--carbon);
+    padding: 60px 10%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-texto h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--marfil);
+    line-height: 1.1;
+}
+
+.hero-texto h1 em {
+    font-style: italic;
+    color: var(--terracota-suave);
+}
+
+.hero-texto p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #a09890;
+    margin-top: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--terracota);
+    flex-shrink: 0;
+}
+
+/* ---- SECCIONES ---- */
+section { padding: 50px 10%; }
+section:nth-child(even) { background-color: var(--crema); }
+
+/* ---- TIPOGRAFÍAS ---- */
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--carbon);
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--terracota);
+    margin-bottom: 14px;
+    margin-top: 32px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--terracota-suave);
+}
+
+h2:first-child { margin-top: 0; }
+
+/* Párrafos optimizados para lectura en pantalla:
+   max-width de ~65-70 caracteres, interlineado 1.8 */
+p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--gris-texto);
+    line-height: 1.8;
+    margin-bottom: 16px;
+    max-width: 680px;
+}
+
+a {
+    color: var(--terracota);
+    text-decoration: none;
+    border-bottom: 1px solid var(--terracota-suave);
+    transition: color 0.2s, border-color 0.2s;
+}
+
+a:hover { color: var(--salvia); border-bottom-color: var(--salvia); }
+
+/* ---- LABEL DE SECCIÓN ---- */
+.label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--salvia);
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* ---- GRID REFERENTES ---- */
+.referentes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--marfil);
+    border: 1px solid var(--borde);
+    border-top: 3px solid var(--terracota);
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.card h2 {
+    font-size: 1.05rem;
+    border-bottom: none;
+    margin: 0 0 8px;
+    padding: 0;
+    color: var(--carbon);
+}
+
+.card p { font-size: 0.88rem; margin-bottom: 8px; }
+
+/* ---- IMAGEN ---- */
+.obra-img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+    margin: 20px 0 8px;
+    border: 1px solid var(--borde);
+}
+
+.atribucion {
+    font-size: 0.76rem;
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.atribucion a { color: #aaa; border-bottom-color: #ddd; font-size: 0.76rem; }
+
+/* ---- LICENCIA ---- */
+.licencia {
+    background: #f5f3ef;
+    border: 1px solid var(--borde);
+    border-radius: 4px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 36px;
+}
+
+.licencia img { width: 80px; flex-shrink: 0; margin-top: 2px; }
+
+.licencia p { font-size: 0.8rem; color: #999; margin: 0; line-height: 1.6; max-width: none; }
+
+/* ---- FOOTER ---- */
+footer {
+    background-color: var(--carbon);
+    padding: 28px 10%;
+    text-align: center;
+}
+
+footer p { font-size: 0.8rem; color: #7a706a; margin: 0; max-width: none; }
